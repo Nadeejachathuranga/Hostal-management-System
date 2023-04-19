@@ -11,8 +11,7 @@ import org.hibernate.cfg.Configuration;
 public class SessionFactoryConfiguration {
     private static SessionFactoryConfiguration factoryConfiguration;
 
-    //final dammot anivaryenma value ekak assign venna ona.constructor eka invoke vena nisa final damma.
-
+   
     private final SessionFactory sessionFactory;
     public static SessionFactoryConfiguration getInstance() {
         return factoryConfiguration == null
