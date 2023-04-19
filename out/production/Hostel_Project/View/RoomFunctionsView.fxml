@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="1003.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RoomFunctionsView">
+   <children>
+      <TextField layoutX="23.0" layoutY="20.0" prefHeight="42.0" prefWidth="559.0" styleClass="SearchField" stylesheets="@Assests/Style.css" />
+      <JFXButton layoutX="508.0" layoutY="25.0" prefHeight="33.0" prefWidth="61.0" stylesheets="@Assests/Style.css" text="Search" />
+      <TableView layoutX="27.0" layoutY="96.0" prefHeight="315.0" prefWidth="677.0" stylesheets="@Assests/Style.css">
+        <columns>
+          <TableColumn prefWidth="325.0" text="C1" />
+          <TableColumn prefWidth="336.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="444.0" prefHeight="193.0" prefWidth="677.0" style="-fx-background-color: #ecf0f1;" styleClass="Label" stylesheets="@Assests/Style.css" />
+      <JFXButton fx:id="btnNewRoom" layoutX="50.0" layoutY="464.0" onAction="#newRoomFormOnAction" prefHeight="42.0" prefWidth="154.0" stylesheets="@Assests/Style.css" text="New" />
+      <JFXButton layoutX="50.0" layoutY="519.0" prefHeight="42.0" prefWidth="154.0" stylesheets="@Assests/Style.css" text="Change Info" />
+      <JFXButton layoutX="50.0" layoutY="576.0" prefHeight="42.0" prefWidth="154.0" stylesheets="@Assests/Style.css" text="Remove" />
+      <Label layoutX="255.0" layoutY="445.0" prefHeight="33.0" prefWidth="225.0" text="New Room">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="roomQuntity" labelFloat="true" layoutX="255.0" layoutY="523.0" prefHeight="25.0" prefWidth="248.0" promptText="Quntity" />
+      <JFXButton fx:id="btnSaveNewRoom" layoutX="433.0" layoutY="593.0" onAction="#SaveNewRoomOnAction" prefHeight="33.0" prefWidth="69.0" text="Done" />
+      <JFXTextField fx:id="roomId" labelFloat="true" layoutX="255.0" layoutY="561.0" prefHeight="25.0" prefWidth="248.0" promptText="Room Id" />
+      <JFXComboBox fx:id="roomTypeCombo" labelFloat="true" layoutX="255.0" layoutY="485.0" prefHeight="25.0" prefWidth="248.0" promptText="Type" />
+   </children>
+</AnchorPane>

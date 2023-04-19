@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1003.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StudentDevViewController">
+   <children>
+      <Label layoutX="13.0" layoutY="12.0" prefHeight="40.0" prefWidth="251.0" text="Student Management">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="116.0" prefHeight="213.0" prefWidth="569.0" style="-fx-background-color: #ecf0f1;" styleClass="Label" stylesheets="@Assests/Style.css" />
+      <Label layoutX="25.0" layoutY="419.0" prefHeight="213.0" prefWidth="227.0" style="-fx-background-color: #ecf0f1;" styleClass="Label" stylesheets="@Assests/Style.css" />
+      <Label layoutX="273.0" layoutY="419.0" prefHeight="213.0" prefWidth="227.0" style="-fx-background-color: #ecf0f1;" styleClass="Label" stylesheets="@Assests/Style.css" />
+      <Label layoutX="521.0" layoutY="419.0" prefHeight="213.0" prefWidth="227.0" style="-fx-background-color: #ecf0f1;" styleClass="Label" stylesheets="@Assests/Style.css" />
+      <Label layoutX="772.0" layoutY="419.0" prefHeight="213.0" prefWidth="227.0" style="-fx-background-color: #ecf0f1;" styleClass="Label" stylesheets="@Assests/Style.css" />
+      <Label layoutX="82.0" layoutY="145.0" prefHeight="17.0" prefWidth="236.0" text="Label">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="172.0" prefHeight="33.0" prefWidth="236.0" text="Find Best Place ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="214.0" prefHeight="17.0" prefWidth="236.0" text="Label" />
+      <ImageView fitHeight="300.0" fitWidth="297.0" layoutX="320.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assests/school.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="82.0" layoutY="257.0" prefHeight="40.0" prefWidth="251.0" stylesheets="@Assests/Style.css" text="Registration">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="37.0" layoutY="427.0" prefHeight="33.0" prefWidth="193.0" text="Non - AC">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="290.0" layoutY="427.0" prefHeight="33.0" prefWidth="193.0" text="Non - AC/Food">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="538.0" layoutY="427.0" prefHeight="33.0" prefWidth="193.0" text="AC">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="789.0" layoutY="427.0" prefHeight="33.0" prefWidth="193.0" text="AC/Food">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
