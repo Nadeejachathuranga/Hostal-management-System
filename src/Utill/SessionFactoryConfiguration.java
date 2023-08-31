@@ -2,6 +2,7 @@ package Utill;
 
 import Dto.RoomDto;
 
+import Entity.Rooms;
 import Entity.RoomsType;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -27,7 +28,8 @@ public class SessionFactoryConfiguration {
 
         Configuration configure = new Configuration().configure()
                 .addAnnotatedClass(RoomDto.class)
-                .addAnnotatedClass(RoomsType.class);
+                .addAnnotatedClass(RoomsType.class)
+                .addAnnotatedClass(Rooms.class);
         sessionFactory = configure.buildSessionFactory();
     }
 

@@ -4,6 +4,7 @@ import Bo.Custom.RoomBo;
 import Dao.Custom.Impl.RoomDaoImpl;
 import Dao.Custom.RoomDao;
 import Dto.RoomDto;
+import Entity.Rooms;
 import Entity.RoomsType;
 
 import java.util.ArrayList;
@@ -11,17 +12,19 @@ import java.util.List;
 
 
 public class RoomBoImpl implements RoomBo {
-    RoomDao roomDao =new RoomDaoImpl();
+
     @Override
     public void SaveRoom(RoomDto roomDto) {
+        RoomDaoImpl roomDao = new RoomDaoImpl();
 
-        roomDao.saveRoom(roomDto);
+        roomDao.saveRoom(new Rooms(roomDto.getId(),roomDto.getType(),roomDto.getPrice()));
     }
 
     @Override
     public ArrayList<RoomsType> getRoomsTypeCombo() {
+        RoomDao roomdao =new RoomDaoImpl();
         ArrayList<RoomsType> roomsTypes = new ArrayList<>();
-        List<RoomsType> roomType = roomDao.getRoomType();
+        List<RoomsType> roomType = roomdao.getRoomType();
         for (RoomsType a:roomType) {
             roomsTypes.add((RoomsType) roomType);
         }

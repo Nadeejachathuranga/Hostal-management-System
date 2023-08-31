@@ -6,6 +6,10 @@ import Entity.RoomsType;
 import Utill.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RoomTypeDaoImpl implements RoomTypeDao {
 
@@ -25,5 +29,15 @@ public class RoomTypeDaoImpl implements RoomTypeDao {
         }
         System.out.println("****");
         System.out.println("****");
+    }
+
+    @Override
+    public List getCategoryToCombo() {
+        Session session = SessionFactoryConfiguration.getInstance().getSession();
+        String sql = "select rtype from Roomstype";
+        NativeQuery sqlQuery = session.createSQLQuery(sql);
+        sqlQuery.addEntity(RoomsType.class);
+        List<RoomsType> list = sqlQuery.list();
+        return list;
     }
 }

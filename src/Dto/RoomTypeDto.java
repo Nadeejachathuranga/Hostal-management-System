@@ -1,26 +1,20 @@
 package Dto;
 
 public class RoomTypeDto {
-    private String type;
+    private String Rtype;
     private String price;
 
-    @Override
-    public String toString() {
-        return "RoomTypeDto{" +
-                "type='" + type + '\'' +
-                ", price='" + price + '\'' +
-                '}';
+    public RoomTypeDto(String rtype, String price) {
+        Rtype = rtype;
+        this.price = price;
     }
 
-    public RoomTypeDto() {
+    public String getRtype() {
+        return Rtype;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+    public void setRtype(String rtype) {
+        Rtype = rtype;
     }
 
     public String getPrice() {
@@ -31,8 +25,14 @@ public class RoomTypeDto {
         this.price = price;
     }
 
-    public RoomTypeDto(String type, String price) {
-        this.type = type;
-        this.price = price;
+    @Override
+    public String toString() {
+        return "RoomTypeDto{" +
+                "Rtype='" + Rtype + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
+
+    public RoomTypeDto() {
     }
 }

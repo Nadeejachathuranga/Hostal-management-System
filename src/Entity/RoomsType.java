@@ -6,43 +6,41 @@ import javax.persistence.Id;
 @Entity
 public class RoomsType {
     @Id
-
-    private String type;
+    private String Rtype;
     private String price;
 
-    public RoomsType(String type) {
-        this.type=type;
+    public String getRtype() {
+        return Rtype;
     }
 
-    @Override
-    public String toString() {
-        return "RoomTypeDto{" +
-                "type='" + type + '\'' +
-                ", price='" + price + '\'' +
-                '}';
-    }
-
-    public RoomsType() {
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+    public void setRtype(String rtype) {
+        Rtype = rtype;
     }
 
     public String getPrice() {
         return price;
     }
 
+    @Override
+    public String toString() {
+        return "RoomsType{" +
+                "Rtype='" + Rtype + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
+
     public void setPrice(String price) {
         this.price = price;
     }
 
-    public RoomsType(String type, String price) {
-        this.type = type;
+    public RoomsType(String rtype, String price) {
+        Rtype = rtype;
         this.price = price;
     }
+
+    public RoomsType() {
+    }
+
+
+
 }
