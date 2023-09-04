@@ -4,6 +4,7 @@ import Dao.Custom.RoomDao;
 import Dto.RoomDto;
 import Entity.Rooms;
 import Entity.RoomsType;
+import Entity.Student;
 import Utill.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -33,5 +34,19 @@ public class RoomDaoImpl implements RoomDao {
                 System.out.println("***Empty");
             }
             return list;
+    }
+
+    @Override
+    public void UpdateRoomStatus(Rooms rooms) {
+        Session session = SessionFactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            session.update(rooms);
+            transaction.commit();
+        }catch (Exception e){
+            System.out.println(e);
+        }finally {
+            session.close();
+        }
     }
 }

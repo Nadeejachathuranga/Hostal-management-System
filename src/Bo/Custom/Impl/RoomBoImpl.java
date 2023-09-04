@@ -2,10 +2,13 @@ package Bo.Custom.Impl;
 
 import Bo.Custom.RoomBo;
 import Dao.Custom.Impl.RoomDaoImpl;
+import Dao.Custom.Impl.StudentDaoImpl;
 import Dao.Custom.RoomDao;
 import Dto.RoomDto;
+import Dto.StudentDto;
 import Entity.Rooms;
 import Entity.RoomsType;
+import Entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +32,12 @@ public class RoomBoImpl implements RoomBo {
             roomsTypes.add((RoomsType) roomType);
         }
         return roomsTypes;
+    }
+
+    @Override
+    public void UpdateRoomStatus(StudentDto studentDto) {
+        RoomDaoImpl roomDao = new RoomDaoImpl();
+        roomDao.UpdateRoomStatus(new Rooms(studentDto.getRoomId(),studentDto.getId()));
     }
 
 

@@ -1,2 +1,7 @@
-package Bo.Custom;public interface StudentBo {
+package Bo.Custom;
+
+import Dto.StudentDto;
+
+public interface StudentBo {
+    public void SaveNewStudent(StudentDto studentDto);
 }

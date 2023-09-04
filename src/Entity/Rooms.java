@@ -19,6 +19,11 @@ public class Rooms {
     public Rooms() {
     }
 
+    public Rooms(String roomId, String id) {
+        this.id=roomId;
+        this.status=id;
+    }
+
     public String getId() {
         return id;
     }
